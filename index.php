@@ -1,24 +1,16 @@
 <?php
+$status = 522522;
+$message = match($status){
+    200,300=>'ok',
+    400=>'not found.',
+    500=>'Server Error',
+    default=> 'Default error here'
+};
 
-echo substr(string:'John Wick',offset:1, length:5);
-function createAccount($name,$email,$password){
-    //create the account logic
-}
-
-createAccount(name:'John Wick',email:'john@gmail.com', password:'john123');
-die('');
-function makeCoffee($type,$sugar,$milk)
-{
-    echo $type;
-    echo '<br>';
-    echo $sugar;
-    echo '<br>';
-    echo $milk;
-    echo '<br>';
-}
-
-
-makeCoffee(type:'Espresso',sugar:2, milk:'Almond Milk');
-
-
+$timeofDay = match('evening'){
+    'morning'=>'coffee',
+    'afternoon'=>'taa',
+    'evening'=>'milk',
+};
+echo $timeofDay;
 
