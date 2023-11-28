@@ -1,21 +1,18 @@
 <?php
 class User{
-        private ?string $email;
-        public function __construct(?string $email=null)
-        {
-            $this->email = $email;
-        }
-        public  function getEmail(){
-            return $this->email;
-        }
+    private string $name;
+    public function __construct(string $name)
+    {
+        $this->name = $name;
+    }
+    public function __toString(): string
+    {
+        return $this->name;
+    }
 }
- $userwithEmail = new User('info@gmail.com');
- $userwithoutEmail = new User();
 
- echo $userwithEmail->getEmail()?? "No Email";
-    echo '<br><br>    ';
- echo $userwithoutEmail->getEmail();
-
+$user = new User('John Wick');
+var_dump($user);
 
 
 
