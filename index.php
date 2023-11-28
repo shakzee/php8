@@ -1,16 +1,15 @@
 <?php
 
 
-function formateValue(mixed $input):mixed {
-    if (is_array($input)){
-        return implode(',',$input);
-    }
-    return $input;
-}
-var_dump(formateValue('any data'));
-//function processInput(mixed $input):mixed {
-//    return $input;
-//}
-//var_dump(processInput(10));
+$email = 'info@shekztech.com';
+var_dump(str_ends_with($email,'info'));
+
+// $mySentence = 'The quick brow fox here with me.';
+// if(str_contains($mySentence,'foxx')){
+//     echo ' fox found.';
+// }
+// else{
+//     echo 'not found..';
+// }
 
 
