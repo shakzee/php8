@@ -1,38 +1,21 @@
 <?php
-#[Attribute]
-class Important{
+class  Book{
+    public function __construct(
+        public string $book,
+        public string $author,
+        public int $pages
+    ){}
 
-}
-
-class  Project {
-   #[Important]
-    public string $deadline;
-}
-
-$ReflectionClass = new ReflectionClass(Project::class);
-$properties = $ReflectionClass->getProperties();
-//var_dump($properties);
-foreach ($properties as $proprety){
-    $attributes = $proprety->getAttributes();
-    foreach ($attributes as $attribute){
-        echo $attribute->getName();
-    }
-}
-
-
-
-//$status = 522522;
-//$message = match($status){
-//    200,300=>'ok',
-//    400=>'not found.',
-//    500=>'Server Error',
-//    default=> 'Default error here'
-//};
+//    public $book;
+//    public $author;
+//    public $pages;
+//    public function __construct($book,$author, $pages)
+//    {
+//        $this->book = $book;
+//        $this->author = $author;
+//        $this->pages = $pages;
 //
-//$timeofDay = match('evening'){
-//    'morning'=>'coffee',
-//    'afternoon'=>'taa',
-//    'evening'=>'milk',
-//};
-//echo $timeofDay;
-
+//    }
+}
+$obj = new Book(book:'my book',author:'skz',pages:20);
+var_dump($obj);
