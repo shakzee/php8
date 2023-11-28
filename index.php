@@ -1,18 +1,16 @@
 <?php
-class User{
-    private string $name;
-    public function __construct(string $name)
-    {
-        $this->name = $name;
+
+
+function formateValue(mixed $input):mixed {
+    if (is_array($input)){
+        return implode(',',$input);
     }
-    public function __toString(): string
-    {
-        return $this->name;
-    }
+    return $input;
 }
-
-$user = new User('John Wick');
-var_dump($user);
-
+var_dump(formateValue('any data'));
+//function processInput(mixed $input):mixed {
+//    return $input;
+//}
+//var_dump(processInput(10));
 
 
