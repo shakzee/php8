@@ -1,21 +1,21 @@
 <?php
-class  Book{
-    public function __construct(
-        public string $book,
-        public string $author,
-        public int $pages
-    ){}
-
-//    public $book;
-//    public $author;
-//    public $pages;
-//    public function __construct($book,$author, $pages)
-//    {
-//        $this->book = $book;
-//        $this->author = $author;
-//        $this->pages = $pages;
-//
-//    }
+class User{
+        private ?string $email;
+        public function __construct(?string $email=null)
+        {
+            $this->email = $email;
+        }
+        public  function getEmail(){
+            return $this->email;
+        }
 }
-$obj = new Book(book:'my book',author:'skz',pages:20);
-var_dump($obj);
+ $userwithEmail = new User('info@gmail.com');
+ $userwithoutEmail = new User();
+
+ echo $userwithEmail->getEmail()?? "No Email";
+    echo '<br><br>    ';
+ echo $userwithoutEmail->getEmail();
+
+
+
+
